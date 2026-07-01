@@ -9,7 +9,6 @@ Exercícios e projetos relacionados ao curso "React" da Mimo — coleção organ
 
 ## Badges
 - Licença: MIT (ver arquivo LICENSE)
-- Linguagens: JavaScript, CSS, HTML
 
 ## Sumário
 - [Visão geral](#visão-geral)
