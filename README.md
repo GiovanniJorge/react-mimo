@@ -1,4 +1,5 @@
 # React — Mimo
+
 Exercícios e projetos relacionados ao curso "React" da Mimo — coleção organizada de aplicações web construídas com React para aprender e praticar os fundamentos da biblioteca.
 
 ## Conteúdo principal
@@ -8,13 +9,13 @@ Exercícios e projetos relacionados ao curso "React" da Mimo — coleção organ
 - Exemplos que cobrem desde componentes básicos até gerenciamento de estado.
 
 ## Badges
-- Licença: MIT (ver arquivo LICENSE)
+![Licença](https://img.shields.io/github/license/GiovanniJorge/react-mimo?style=flat-square)
 
 ## Sumário
 - [Visão geral](#visão-geral)
 - [Estrutura do repositório](#estrutura-do-repositório)
+- [Destaques do repositório](#destaques-do-repositório)
 - [Como executar os projetos](#como-executar-os-projetos)
-- [Boas práticas / recomendações](#boas-práticas--recomendações)
 - [Contribuindo](#contribuindo)
 - [Licença](#licença)
 - [Autor / Contato](#autor--contato)
@@ -24,111 +25,71 @@ Este repositório organiza projetos React desenvolvidos durante o curso da Mimo.
 
 ## Estrutura do repositório
 Top-level:
-- `.gitattributes`
-- `LICENSE`
-- `README.md`
-- `projetos-gerais/`           — projetos de aprendizado geral com React
-  - `score-keeper/`            — aplicação de contagem de pontos (props, estado, eventos)
-  - `wordle-clone/`            — clone do jogo Wordle em React (gerenciamento de estado, lógica de jogo)
+```text
+├── .gitattributes
+├── LICENSE
+├── README.md
+└── projetos-gerais/            # Projetos de aprendizado geral com React
+    ├── score-keeper/          # Aplicação de contagem de pontos (props, estado, eventos)
+    │   ├── public/
+    │   └── src/               # Componentes, lógica estruturada e estilos
+    ├── wordle-clone/          # Clone do jogo Wordle em React (estado complexo e lógica)
+    │   ├── public/
+    │   └── src/               # Componentes, lógica estruturada e estilos
+    └── ...                    # Outros subprojetos construídos ao longo do curso
+```
 
-Como se encaixa:
-- Cada pasta dentro de `projetos-gerais/` é um projeto independente com seu próprio `package.json` e estrutura Create React App.
-- A forma usual de usar o repositório é executar o projeto específico que deseja estudar.
-- Cada projeto contém componentes React que demonstram conceitos específicos da biblioteca.
+### Como se encaixa:
+- O repositório abriga uma variedade de projetos independentes criados ao longo do curso.
+- Cada pasta dentro de `projetos-gerais/` funciona como um ecossistema independente baseado em Create React App, contendo seu próprio arquivo `package.json` e documentação dedicada.
+
+## Destaques do repositório
+
+### Score Keeper
+* **Descrição:** Aplicativo utilitário voltado à contagem dinâmica de pontuações, explorando ciclos de eventos, passagem de props e renderização condicional.
+* **Tecnologias:** React (Hooks), CSS3.
+
+### Wordle Clone
+* **Descrição:** Clone do famoso jogo Wordle adaptado para ambiente React, exercitando lógicas de validação de strings, gerenciamento de estados complexos de teclado e matrizes de jogo.
+* **Tecnologias:** React (Hooks), CSS3.
 
 ## Como executar os projetos
 
 ### Pré-requisitos
-- Node.js (versão 14+)
-- npm (normalmente incluído com Node.js)
+- **Node.js** (v14 ou superior)
+- **npm** como gerenciador de pacotes
 
-### Instalação e execução de um projeto
-Acesse a pasta do projeto desejado e execute os comandos:
+### Passos para execução
 
+1. **Clone o repositório:**
 ```bash
-# Navegar para o projeto
+git clone [https://github.com/GiovanniJorge/react-mimo.git](https://github.com/GiovanniJorge/react-mimo.git)
+cd react-mimo
+```
+
+2. **Navegue até a pasta do projeto e instale as dependências (Exemplo com Score Keeper):**
+```bash
 cd projetos-gerais/score-keeper
-
-# Instalar dependências
 npm install
+```
 
-# Executar no modo desenvolvimento
+3. **Inicie o servidor de desenvolvimento:**
+```bash
 npm start
 ```
-
-A aplicação abrirá automaticamente em `http://localhost:3000` no seu navegador. A página recarrega quando você faz alterações.
-
-### Compilar para produção
-Para gerar uma versão otimizada e minificada:
-
-```bash
-cd projetos-gerais/seu-projeto
-npm run build
-```
-
-Os arquivos compilados estarão na pasta `build/`, prontos para deploy.
-
-### Scripts disponíveis (em cada projeto)
-
-- **`npm start`** — executa a app em modo desenvolvimento (http://localhost:3000)
-- **`npm test`** — inicia o test runner em modo interativo
-- **`npm run build`** — compila a app para produção na pasta `build/`
-- **`npm run eject`** — ⚠️ operação irreversível; oferece controle total sobre configuração (normalmente não é necessário)
-
-## Boas práticas / recomendações
-
-### Desenvolvimento
-- Use nomes descritivos para componentes e funções.
-- Mantenha componentes pequenos e focados em uma única responsabilidade.
-- Documente props importantes com comentários ou JSDoc.
-- Prefira componentes funcionais com Hooks (`useState`, `useEffect`, etc.) em vez de componentes de classe.
-
-### Estrutura de pastas (dentro de cada projeto)
-```
-projeto/
-├── public/
-│   ├── index.html
-│   └── favicon.ico
-├── src/
-│   ├── components/       — componentes reutilizáveis
-│   ├── pages/           — páginas ou views principais
-│   ├── App.js           — componente raiz
-│   ├── index.js         — ponto de entrada
-│   └── index.css        — estilos globais
-├── package.json
-└── README.md
-```
-
-### Estilo e linting
-- Use o Prettier (se configurado) para manter formatação consistente.
-- Mantenha estilos CSS organizados (considere usar módulos CSS ou styled-components).
-- Teste a aplicação em diferentes tamanhos de tela para garantir responsividade.
-
-### Commits
-- Faça commits atômicos com mensagens claras.
-- Exemplo: `"feat: adiciona componente de contador"` ou `"fix: corrige bug no score-keeper"`.
+A aplicação abrirá automaticamente em `http://localhost:3000`. Para gerar a versão de produção otimizada em uma pasta `/build`, execute `npm run build`.
 
 ## Contribuindo
-Contribuições são bem-vindas (ex.: melhorias, correções, novos projetos, comentários). Fluxo sugerido:
+Contribuições são bem-vistas! Se deseja adicionar um novo projeto ou refatorar componentes para melhores padrões de Hooks, siga os passos abaixo:
 
-1. Fork do repositório.
-2. Criar branch com nome descritivo: `feature/novo-projeto` ou `fix/correcao`.
-3. Fazer commits atômicos com mensagens claras.
-4. Abrir Pull Request descrevendo as mudanças e o conceito React abordado.
-5. Se aplicável, inclua instruções sobre como testar o novo projeto.
-
-Sugestões adicionais:
-- Adicione um pequeno README em cada pasta de projeto explicando o objetivo e conceitos aprendidos.
-- Considere adicionar componentes reutilizáveis em uma pasta compartilhada se houver padrões comuns.
-- Documente componentes complexos com comentários explicativos.
-
-## Testes e automação (opcional)
-- Poderia ser adicionado um workflow (GitHub Actions) que executa `npm install` e `npm run build` em cada projeto para garantir que o repositório permaneça compilável.
-- Considere adicionar testes unitários com Jest e React Testing Library para validar componentes críticos.
+1. Faça um **Fork** do repositório.
+2. Crie uma branch com nome descritivo: `feature/novo-projeto` ou `fix/correcao`.
+3. Faça commits atômicos com mensagens claras e objetivas.
+4. Abra um **Pull Request** detalhando as alterações implementadas.
 
 ## Licença
-Este repositório utiliza a licença MIT — consulte o arquivo `LICENSE` na raiz.
+Este repositório utiliza a licença MIT — consulte o arquivo [LICENSE](LICENSE) na raiz.
 
 ## Autor / Contato
-Autor: Giovanni Jorge  
-Repositório: https://github.com/GiovanniJorge/react-mimo
+- **Autor:** Giovanni Jorge  
+- **Repositório:** [https://github.com/GiovanniJorge/react-mimo](https://github.com/GiovanniJorge/react-mimo)
