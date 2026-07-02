@@ -10,6 +10,7 @@ Exercícios e projetos relacionados ao curso "React" da Mimo — coleção organ
 
 ## Badges
 ![Licença](https://img.shields.io/github/license/GiovanniJorge/react-mimo?style=flat-square)
+![Projetos](https://img.shields.io/badge/quantidade-2%20projetos-blue?style=flat-square)
 
 ## Sumário
 - [Visão geral](#visão-geral)
