@@ -34,10 +34,9 @@ Top-level:
     ├── score-keeper/          # Aplicação de contagem de pontos (props, estado, eventos)
     │   ├── public/
     │   └── src/               # Componentes, lógica estruturada e estilos
-    ├── wordle-clone/          # Clone do jogo Wordle em React (estado complexo e lógica)
-    │   ├── public/
-    │   └── src/               # Componentes, lógica estruturada e estilos
-    └── ...                    # Outros subprojetos construídos ao longo do curso
+    └── wordle-clone/          # Clone do jogo Wordle em React (estado complexo e lógica)
+        ├── public/
+        └── src/               # Componentes, lógica estruturada e estilos
 ```
 
 ### Como se encaixa:
