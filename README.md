@@ -30,7 +30,7 @@ Top-level:
 ├── .gitattributes
 ├── LICENSE
 ├── README.md
-└── projetos-gerais/            # Projetos de aprendizado geral com React
+└── projetos-gerais/           # Projetos de aprendizado geral com React
     ├── score-keeper/          # Aplicação de contagem de pontos (props, estado, eventos)
     │   ├── public/
     │   └── src/               # Componentes, lógica estruturada e estilos
