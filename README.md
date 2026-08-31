@@ -1,95 +1,225 @@
-# React — Mimo
+# React Mimo
 
-Exercícios e projetos relacionados ao curso "React" da Mimo — coleção organizada de aplicações web construídas com React para aprender e praticar os fundamentos da biblioteca.
+[![JavaScript](https://img.shields.io/badge/JavaScript-ES6%2B-F7DF1E?logo=javascript&logoColor=black)](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+[![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)](https://react.dev/)
+[![Create React App](https://img.shields.io/badge/Create%20React%20App-5.0.1-09D3AC?logo=react&logoColor=white)](https://create-react-app.dev/)
+[![Status](https://img.shields.io/badge/status-concluído-brightgreen)](#)
+[![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 
-## Conteúdo principal
-- Projetos práticos focados em conceitos e componentes React.
-- Aplicações completas criadas com Create React App.
-- Estrutura modular com pastas organizadas por projeto.
-- Exemplos que cobrem desde componentes básicos até gerenciamento de estado.
-
-## Badges
-![Licença](https://img.shields.io/github/license/GiovanniJorge/react-mimo?style=flat-square)
-![Projetos](https://img.shields.io/badge/quantidade-2%20projetos-blue?style=flat-square)
+Repositório de projetos práticos e exercícios de React desenvolvidos dentro do curso Mimo. O objetivo principal é consolidar conceitos fundamentais da biblioteca React, como componentes, props, estado, renderização condicional e lógica de interface.
 
 ## Sumário
-- [Visão geral](#visão-geral)
-- [Estrutura do repositório](#estrutura-do-repositório)
-- [Destaques do repositório](#destaques-do-repositório)
-- [Como executar os projetos](#como-executar-os-projetos)
-- [Contribuindo](#contribuindo)
+
+- [Visualização](#visualização)
+- [Descrição do Projeto](#descrição-do-projeto)
+- [Arquitetura e Estrutura do Repositório](#arquitetura-e-estrutura-do-repositório)
+- [Como Executar Localmente](#como-executar-localmente)
+- [Uso e Exemplos](#uso-e-exemplos)
+- [Troubleshooting / FAQ](#troubleshooting--faq)
+- [Contribuição](#contribuição)
+- [Autor](#autor)
 - [Licença](#licença)
-- [Autor / Contato](#autor--contato)
 
-## Visão geral
-Este repositório organiza projetos React desenvolvidos durante o curso da Mimo. Cada projeto exemplifica conceitos e padrões da biblioteca React, desde a criação de componentes funcionais até a manipulação de estado e props. Os projetos estão estruturados de forma independente e podem ser executados isoladamente.
-
-## Estrutura do repositório
-Top-level:
-```text
-├── .gitattributes
-├── LICENSE
-├── README.md
-└── projetos-gerais/           # Projetos de aprendizado geral com React
-    ├── score-keeper/          # Aplicação de contagem de pontos (props, estado, eventos)
-    │   ├── public/
-    │   └── src/               # Componentes, lógica estruturada e estilos
-    └── wordle-clone/          # Clone do jogo Wordle em React (estado complexo e lógica)
-        ├── public/
-        └── src/               # Componentes, lógica estruturada e estilos
-```
-
-### Como se encaixa:
-- O repositório abriga uma variedade de projetos independentes criados ao longo do curso.
-- Cada pasta dentro de `projetos-gerais/` funciona como um ecossistema independente baseado em Create React App, contendo seu próprio arquivo `package.json` e documentação dedicada.
-
-## Destaques do repositório
+## Visualização
 
 ### Score Keeper
-* **Descrição:** Aplicativo utilitário voltado à contagem dinâmica de pontuações, explorando ciclos de eventos, passagem de props e renderização condicional.
-* **Tecnologias:** React (Hooks), CSS3.
+
+![Preview do Score Keeper](projetos-gerais/score-keeper/preview.png)
 
 ### Wordle Clone
-* **Descrição:** Clone do famoso jogo Wordle adaptado para ambiente React, exercitando lógicas de validação de strings, gerenciamento de estados complexos de teclado e matrizes de jogo.
-* **Tecnologias:** React (Hooks), CSS3.
 
-## Como executar os projetos
+![Preview do Wordle Clone](projetos-gerais/wordle-clone/preview1.png)
+
+![Preview do Wordle Clone - alternativa](projetos-gerais/wordle-clone/preview2.png)
+
+## Descrição do Projeto
+
+Este repositório reúne uma coleção de aplicações web construídas com React para aprendizado e prática. Cada projeto foi desenvolvido como uma mini aplicação independente, com foco na exploração de conceitos específicos da biblioteca e na criação de interfaces interativas do zero.
+
+A principal tecnologia utilizada é React, em conjunto com JavaScript moderno e estilos CSS para a construção de interfaces. O conteúdo abrange aplicações simples e exercícios de lógica, incluindo gestão de estado, interação com eventos e renderização dinâmica.
+
+## Arquitetura e Estrutura do Repositório
+
+A organização do projeto é simples e direta:
+
+```text
+react-mimo/
+├── LICENSE
+├── README.md
+├── .gitattributes
+└── projetos-gerais/
+    ├── score-keeper/
+    │   ├── public/
+    │   └── src/
+    │       ├── App.js
+    │       ├── App.css
+    │       ├── ScoreKeeper.js
+    │       ├── ScoreView.js
+    │       └── ...
+    └── wordle-clone/
+        ├── public/
+        └── src/
+            ├── App.js
+            ├── App.css
+            ├── Row.js
+            └── ...
+```
+
+### Estrutura observada
+
+- `projetos-gerais/`: diretório raiz dos projetos de aprendizado.
+- `score-keeper/`: aplicação de contagem de pontos e estado compartilhado.
+- `wordle-clone/`: clone do jogo Wordle, com regras e lógica de interação mais complexas.
+- `public/`: arquivos públicos e HTML base do app.
+- `src/`: código-fonte principal, incluindo componentes, estilos e lógicas da aplicação.
+
+### Fluxo de dados
+
+Como se trata de projetos frontend em React, o fluxo principal é:
+
+1. O usuário interage com a interface;
+2. Eventos disparam atualizações de estado local;
+3. Os componentes re-renderizam com base no novo estado;
+4. As mudanças são refletidas visualmente na interface sem necessidade de backend.
+
+Esses projetos são executados de forma independente, com cada app possuindo seu próprio `package.json` e ambiente local.
+
+## Como Executar Localmente
 
 ### Pré-requisitos
-- **Node.js** (v14 ou superior)
-- **npm** como gerenciador de pacotes
 
-### Passos para execução
+- Node.js 18 LTS ou superior
+- npm (geralmente incluso com o Node.js)
+- Git para clonar o projeto
 
-1. **Clone o repositório:**
+### Configuração de Ambiente
+
+Não há variáveis de ambiente exigidas para a execução atual do repositório. Os projetos são renderizados localmente em React sem dependência de `.env` ou serviços externos.
+
+### Instalação
+
+1. Clone o repositório:
+
 ```bash
-git clone [https://github.com/GiovanniJorge/react-mimo.git](https://github.com/GiovanniJorge/react-mimo.git)
+git clone https://github.com/GiovanniJorge/react-mimo.git
 cd react-mimo
 ```
 
-2. **Navegue até a pasta do projeto e instale as dependências (Exemplo com Score Keeper):**
+2. Acesse a pasta do projeto desejado:
+
 ```bash
 cd projetos-gerais/score-keeper
+```
+
+ou
+
+```bash
+cd projetos-gerais/wordle-clone
+```
+
+3. Instale as dependências:
+
+```bash
 npm install
 ```
 
-3. **Inicie o servidor de desenvolvimento:**
+### Execução
+
+Para iniciar a aplicação em modo de desenvolvimento:
+
 ```bash
 npm start
 ```
-A aplicação abrirá automaticamente em `http://localhost:3000`. Para gerar a versão de produção otimizada em uma pasta `/build`, execute `npm run build`.
 
-## Contribuindo
-Contribuições são bem-vistas! Se deseja adicionar um novo projeto ou refatorar componentes para melhores padrões de Hooks, siga os passos abaixo:
+O projeto será executado localmente, normalmente em:
 
-1. Faça um **Fork** do repositório.
-2. Crie uma branch com nome descritivo: `feature/novo-projeto` ou `fix/correcao`.
-3. Faça commits atômicos com mensagens claras e objetivas.
-4. Abra um **Pull Request** detalhando as alterações implementadas.
+```text
+http://localhost:3000
+```
+
+Para gerar uma build de produção:
+
+```bash
+npm run build
+```
+
+## Uso e Exemplos
+
+### Score Keeper
+
+A aplicação de pontuação permite:
+
+- incrementar ou decrementar valores;
+- acompanhar a pontuação em tempo real;
+- exibir feedback visual com base no estado atual.
+
+### Wordle Clone
+
+O clone do Wordle inclui:
+
+- matriz de letras;
+- entrada e validação de tentativas;
+- lógica de comparação com palavra alvo;
+- feedback visual por linha e status das letras.
+
+Esses projetos servem como referência prática para aprender manipulação de estado, renderização condicional, composição de componentes e lógica de interação em React.
+
+## Troubleshooting / FAQ
+
+### 1. O projeto não inicia
+
+Verifique se o Node.js está instalado e atualizado:
+
+```bash
+node -v
+npm -v
+```
+
+Se necessário, reinstale o Node.js e rode novamente:
+
+```bash
+npm install
+```
+
+### 2. Erro de dependência ao instalar
+
+Remova a pasta `node_modules` e o lockfile, se existir, e reinstale:
+
+```bash
+rm -rf node_modules package-lock.json
+npm install
+```
+
+### 3. Porta 3000 já está em uso
+
+O React usa a porta 3000 por padrão. Se ela estiver ocupada, o terminal pode sugerir outra porta automaticamente. Caso contrário, basta encerrar o processo que está usando a porta ou ajustar manualmente as configurações do ambiente.
+
+### 4. O projeto foi executado, mas não aparece corretamente
+
+Confirme se você entrou na pasta correta antes de rodar:
+
+```bash
+cd projetos-gerais/<nome-do-projeto>
+npm start
+```
+
+## Contribuição
+
+Contribuições são bem-vindas. Para colaborar com melhorias, novos projetos ou ajustes:
+
+1. Faça um fork do repositório.
+2. Crie uma branch com nome descritivo:
+   ```bash
+   git checkout -b feature/nova-funcionalidade
+   ```
+3. Faça commits claros e objetivos.
+4. Abra um Pull Request descrevendo a mudança.
+
+## Autor
+
+- Nome: Giovanni Jorge
+- GitHub: [@GiovanniJorge](https://github.com/GiovanniJorge)
 
 ## Licença
-Este repositório utiliza a licença MIT — consulte o arquivo [LICENSE](LICENSE) na raiz.
 
-## Autor / Contato
-- **Autor:** Giovanni Jorge  
-- **Repositório:** [https://github.com/GiovanniJorge/react-mimo](https://github.com/GiovanniJorge/react-mimo)
+Este projeto está licenciado sob a licença MIT. Consulte o arquivo `LICENSE` na raiz do repositório para mais informações.
