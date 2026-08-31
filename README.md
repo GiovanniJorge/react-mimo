@@ -1,10 +1,12 @@
 # React Mimo
 
-[![JavaScript](https://img.shields.io/badge/JavaScript-ES6%2B-F7DF1E?logo=javascript&logoColor=black)](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
-[![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)](https://react.dev/)
-[![Create React App](https://img.shields.io/badge/Create%20React%20App-5.0.1-09D3AC?logo=react&logoColor=white)](https://create-react-app.dev/)
-[![Status](https://img.shields.io/badge/status-concluído-brightgreen)](#)
-[![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+<p align="center">
+    <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript"><img src="https://img.shields.io/badge/JavaScript-ES6%2B-F7DF1E?logo=javascript&logoColor=black" alt="JavaScript"></a>
+    <a href="https://react.dev/"><img src="https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black" alt="React"></a>
+    <a href="https://create-react-app.dev/"><img src="https://img.shields.io/badge/Create%20React%20App-5.0.1-09D3AC?logo=react&logoColor=white" alt="Create React App"></a>
+    <a href="#"><img src="https://img.shields.io/badge/status-concluído-brightgreen" alt="Status"></a>
+    <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue" alt="License"></a>
+</p>
 
 Repositório de projetos práticos e exercícios de React desenvolvidos dentro do curso Mimo. O objetivo principal é consolidar conceitos fundamentais da biblioteca React, como componentes, props, estado, renderização condicional e lógica de interface.
 
